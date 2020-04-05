@@ -7,8 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{round_number}}</title>
 </head>
+
 <body>
-    <h1>{{round_number}}, lotto</h1>
+<h1>{{round_date}}, {{round_number}} lotto winner</h1>
+
+<table>
+    <tr>
+        <td>Win Numbers:</td>
+        {% for win_number in win_number_list %}
+        <td>{{win_number}}</td>
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Bonus Number:</td>
+        <td>{{bonus_number}}</td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>Winner prize:</td>
+        <td>{{win_amt}}</td>
+    </tr>
+
+</table>
 
 </body>
 </html>

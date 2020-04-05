@@ -20,15 +20,9 @@ def index():
 
 @ app.route('/get_win_numbers/<int:round_number>')
 def get_win_number(round_number):
-    round_date, win_number_list, bonus_number, win_amt = lotto.get_win_numbers(round_number)
-    return render_template('./get_win_numbers.html',
-                           round_number=round_number)
-
-
-
-
-
-
+    context_key = ['round_number', 'round_date', 'win_number_list', 'bonus_number', 'win_amt']
+    context = dict(zip(context_key, lotto.get_win_numbers(round_number)))
+    return render_template('./get_win_numbers.html', **context)
 
 
 if __name__ == '__main__':
