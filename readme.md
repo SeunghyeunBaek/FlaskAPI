@@ -15,6 +15,7 @@
 /lotto_api
     /templates
         index.html
+        get_win_number.html
 
     main.py
     lotto.py
